@@ -6,145 +6,65 @@
 
 <title>Cardápio Digital</title>
 
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f5f5f5;
-}
-
-.header {
-  background: linear-gradient(135deg, #128C7E, #25D366);
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-.container {
-  max-width: 600px;
-  margin: auto;
-  padding: 10px;
-}
-
-.produto {
-  background: white;
-  border-radius: 15px;
-  padding: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  transition: 0.2s;
-}
-
-.produto:hover {
-  transform: scale(1.02);
-}
-
-.produto img {
-  width: 70px;
-  height: 70px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.info {
-  flex: 1;
-}
-
-.controles {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.controles button {
-  background: #25D366;
-  border: none;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.quantidade {
-  font-weight: bold;
-}
-
-.carrinho {
-  background: white;
-  padding: 15px;
-  border-radius: 15px;
-  margin-top: 15px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-.item-carrinho {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5px;
-}
-
-.total {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.finalizar {
-  width: 100%;
-  margin-top: 10px;
-  padding: 12px;
-  background: #128C7E;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-}
-
-.footer {
-  background: white;
-  padding: 15px;
-  margin-top: 15px;
-  border-radius: 15px;
-  font-size: 14px;
-}
-</style>
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div class="header">
-  <h1>🍔 Lanchonete Top</h1>
+  <h1>🍔 Buiu Sanduíches</h1>
   <p>Peça rápido pelo WhatsApp</p>
 </div>
 
 <div class="container">
 
   <!-- PRODUTOS -->
+
   <div class="produto">
-    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+    <img src="img/xcamarão.jpeg" alt="X Camarão">
     <div class="info">
-      <b>X-Burguer</b><br>R$10
+      <b>X Camarão</b><br>R$20
     </div>
     <div class="controles">
-      <button onclick="remover('X-Burguer', 10)">-</button>
-      <span id="qtd-X-Burguer" class="quantidade">0</span>
-      <button onclick="add('X-Burguer', 10)">+</button>
+      <button onclick="remover('XCamarao')">-</button>
+      <span id="qtd-XCamarao" class="quantidade">0</span>
+      <button onclick="add('XCamarao', 20)">+</button>
     </div>
   </div>
 
   <div class="produto">
-    <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d">
+    <img src="img/franCoração.jpeg" alt="Frango com Coração">
     <div class="info">
-      <b>X-Salada</b><br>R$12
+      <b>Frango com Coração</b><br>R$18
     </div>
     <div class="controles">
-      <button onclick="remover('X-Salada', 12)">-</button>
-      <span id="qtd-X-Salada">0</span>
-      <button onclick="add('X-Salada', 12)">+</button>
+      <button onclick="remover('FrangoCoracao')">-</button>
+      <span id="qtd-FrangoCoracao" class="quantidade">0</span>
+      <button onclick="add('FrangoCoracao', 18)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <img src="img/xcaseiro.jpeg" alt="X Caseiro">
+    <div class="info">
+      <b>X Caseiro</b><br>R$15
+    </div>
+    <div class="controles">
+      <button onclick="remover('XCaseiro')">-</button>
+      <span id="qtd-XCaseiro" class="quantidade">0</span>
+      <button onclick="add('XCaseiro', 15)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <img src="img/megaBuiuEspecial.jpeg" alt="Mega Buiu Especial">
+    <div class="info">
+      <b>Mega Buiu Especial</b><br>R$25
+    </div>
+    <div class="controles">
+      <button onclick="remover('MegaBuiu')">-</button>
+      <span id="qtd-MegaBuiu" class="quantidade">0</span>
+      <button onclick="add('MegaBuiu', 25)">+</button>
     </div>
   </div>
 
@@ -159,70 +79,16 @@ body {
     </button>
   </div>
 
-  <!-- INFO -->
+  <!-- INFORMAÇÕES -->
   <div class="footer">
-    <p><b>📍 Endereço:</b> Rua Exemplo, 123 - Natal/RN</p>
+    <p><b>📍 Endereço:</b> Natal/RN</p>
     <p><b>🕒 Horário:</b> 18h às 23h</p>
-    <p><b>📞 WhatsApp:</b> (84) 99113-9970</p>
+    <p><b>📞 WhatsApp:</b> (84) 9 88687921</p>
   </div>
 
 </div>
 
-<script>
-let carrinho = {};
-
-function add(nome, preco) {
-  if (!carrinho[nome]) carrinho[nome] = {qtd: 0, preco: preco};
-  carrinho[nome].qtd++;
-  atualizar();
-}
-
-function remover(nome) {
-  if (carrinho[nome] && carrinho[nome].qtd > 0) {
-    carrinho[nome].qtd--;
-  }
-  atualizar();
-}
-
-function atualizar() {
-  let lista = document.getElementById("lista");
-  let total = 0;
-  lista.innerHTML = "";
-
-  for (let item in carrinho) {
-    if (carrinho[item].qtd > 0) {
-      let subtotal = carrinho[item].qtd * carrinho[item].preco;
-      total += subtotal;
-
-      lista.innerHTML += `
-        <div class="item-carrinho">
-          ${item} x${carrinho[item].qtd} - R$${subtotal}
-        </div>
-      `;
-
-      document.getElementById("qtd-" + item).innerText = carrinho[item].qtd;
-    }
-  }
-
-  document.getElementById("total").innerText = total;
-}
-
-function enviar() {
-  let mensagem = "Olá, quero fazer um pedido:%0A";
-
-  for (let item in carrinho) {
-    if (carrinho[item].qtd > 0) {
-      mensagem += `- ${item} x${carrinho[item].qtd}%0A`;
-    }
-  }
-
-  let total = document.getElementById("total").innerText;
-  mensagem += "%0ATotal: R$" + total;
-
-  let url = "https://wa.me/5584991139970?text=" + mensagem;
-  window.open(url, "_blank");
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
