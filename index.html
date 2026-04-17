@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Cardápio Digital</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f2f2f2;
+}
+
+.header {
+  background: #128C7E;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 15px;
+}
+
+.produto {
+  background: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.produto img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.info {
+  flex: 1;
+}
+
+button {
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.carrinho {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.total {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.finalizar {
+  width: 100%;
+  margin-top: 10px;
+  background: #128C7E;
+  padding: 12px;
+}
+
+.footer {
+  background: white;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🍔 Lanchonete Top</h1>
+  <p>Peça rápido pelo WhatsApp</p>
+</div>
+
+<div class="container">
+
+  <!-- PRODUTO 1 -->
+  <div class="produto">
+    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="">
+    <div class="info">
+      <b>X-Burguer</b><br>R$10
+    </div>
+    <button onclick="add('X-Burguer', 10)">+</button>
+  </div>
+
+  <!-- PRODUTO 2 -->
+  <div class="produto">
+    <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d" alt="">
+    <div class="info">
+      <b>X-Salada</b><br>R$12
+    </div>
+    <button onclick="add('X-Salada', 12)">+</button>
+  </div>
+
+  <!-- PRODUTO 3 -->
+  <div class="produto">
+    <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add" alt="">
+    <div class="info">
+      <b>Batata Frita</b><br>R$8
+    </div>
+    <button onclick="add('Batata Frita', 8)">+</button>
+  </div>
+
+  <!-- PRODUTO 4 -->
+  <div class="produto">
+    <img src="https://images.unsplash.com/photo-1581006852262-e4307cf6283a" alt="">
+    <div class="info">
+      <b>Refrigerante</b><br>R$5
+    </div>
+    <button onclick="add('Refrigerante', 5)">+</button>
+  </div>
+
+  <!-- CARRINHO -->
+  <div class="carrinho">
+    <h3>🛒 Seu Pedido</h3>
+    <ul id="lista"></ul>
+    <p class="total">Total: R$ <span id="total">0</span></p>
+
+    <button class="finalizar" onclick="enviar()">
+      Finalizar no WhatsApp
+    </button>
+  </div>
+
+  <!-- INFO -->
+  <div class="footer">
+    <p><b>📍 Endereço:</b> Rua Exemplo, 123 - Natal/RN</p>
+    <p><b>🕒 Horário:</b> 18h às 23h</p>
+    <p><b>📞 WhatsApp:</b> (84) 99113-9970</p>
+  </div>
+
+</div>
+
+<script>
+let carrinho = [];
+let total = 0;
+
+function add(nome, preco) {
+  carrinho.push({nome, preco});
+  total += preco;
+  atualizar();
+}
+
+function atualizar() {
+  let lista = document.getElementById("lista");
+  let totalEl = document.getElementById("total");
+
+  lista.innerHTML = "";
+
+  carrinho.forEach((item, index) => {
+    let li = document.createElement("li");
+    li.innerHTML = item.nome + " - R$" + item.preco +
+      ' <button onclick="remover(' + index + ')">❌</button>';
+    lista.appendChild(li);
+  });
+
+  totalEl.textContent = total;
+}
+
+function remover(index) {
+  total -= carrinho[index].preco;
+  carrinho.splice(index, 1);
+  atualizar();
+}
+
+function enviar() {
+  let mensagem = "Olá, quero fazer um pedido:%0A";
+
+  carrinho.forEach(item => {
+    mensagem += "- " + item.nome + " (R$" + item.preco + ")%0A";
+  });
+
+  mensagem += "%0ATotal: R$" + total;
+
+  let url = "https://wa.me/5584991139970?text=" + mensagem;
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
