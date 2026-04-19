@@ -51,7 +51,7 @@ function formatarNome(nome) {
     XCamarao: "X-Camarão",
     Framarao: "Framarão",
 
-    Tradicional: "Tradicional",
+    Tradicional: "Cachorro Quente",
     Especial: "Especial",
     HotSertanejo: "Sertanejo",
     HotCoracao: "De Coração",
@@ -138,3 +138,9 @@ function enviar() {
 
   window.open(url, "_blank");
 }
+
+/* ALTERAÇÃO PEDIDA:
+   Cachorro Quente Tradicional agora custa R$ 7,50
+   No HTML use:
+   onclick="add('Tradicional',7.50)"
+*/
