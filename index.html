@@ -18,13 +18,11 @@
 
 <div class="container">
 
-  <!-- PRODUTOS -->
+  <!-- PRODUTOS ORIGINAIS -->
 
   <div class="produto">
-    <img src="img/caseiro.jpg" alt="X Caseiro">
-    <div class="info">
-      <b>X Caseiro</b><br>R$15
-    </div>
+    <img src="img/caseiro.jpg">
+    <div class="info"><b>X Caseiro</b><br>R$15</div>
     <div class="controles">
       <button onclick="remover('XCaseiro')">-</button>
       <span id="qtd-XCaseiro">0</span>
@@ -33,10 +31,8 @@
   </div>
 
   <div class="produto">
-    <img src="img/xcamarão.jpeg" alt="X Camarão Especial">
-    <div class="info">
-      <b>X Camarão Especial</b><br>R$20
-    </div>
+    <img src="img/xcamarão.jpeg">
+    <div class="info"><b>X Camarão Especial</b><br>R$20</div>
     <div class="controles">
       <button onclick="remover('XCamaraoEspecial')">-</button>
       <span id="qtd-XCamaraoEspecial">0</span>
@@ -45,10 +41,8 @@
   </div>
 
   <div class="produto">
-    <img src="img/franCoração.jpeg" alt="Frango com Coração">
-    <div class="info">
-      <b>Frango com Coração</b><br>R$18
-    </div>
+    <img src="img/franCoração.jpeg">
+    <div class="info"><b>Frango com Coração</b><br>R$18</div>
     <div class="controles">
       <button onclick="remover('FrangoCoracao')">-</button>
       <span id="qtd-FrangoCoracao">0</span>
@@ -57,10 +51,8 @@
   </div>
 
   <div class="produto">
-    <img src="img/megaBuiuEspecial.jpeg" alt="Mega Buiu Especial">
-    <div class="info">
-      <b>Mega Buiu Especial</b><br>R$25
-    </div>
+    <img src="img/megaBuiuEspecial.jpeg">
+    <div class="info"><b>Mega Buiu Especial</b><br>R$25</div>
     <div class="controles">
       <button onclick="remover('MegaBuiu')">-</button>
       <span id="qtd-MegaBuiu">0</span>
@@ -69,10 +61,8 @@
   </div>
 
   <div class="produto">
-    <img src="img/pitbull.jpg" alt="X Pitbull">
-    <div class="info">
-      <b>X Pitbull</b><br>R$22
-    </div>
+    <img src="img/pitbull.jpg">
+    <div class="info"><b>X Pitbull</b><br>R$22</div>
     <div class="controles">
       <button onclick="remover('XPitbull')">-</button>
       <span id="qtd-XPitbull">0</span>
@@ -81,10 +71,8 @@
   </div>
 
   <div class="produto">
-    <img src="img/sertanejo.jpg" alt="X Sertanejo">
-    <div class="info">
-      <b>X Sertanejo</b><br>R$19
-    </div>
+    <img src="img/sertanejo.jpg">
+    <div class="info"><b>X Sertanejo</b><br>R$19</div>
     <div class="controles">
       <button onclick="remover('XSertanejo')">-</button>
       <span id="qtd-XSertanejo">0</span>
@@ -93,10 +81,8 @@
   </div>
 
   <div class="produto">
-    <img src="img/toscabacon.jpg" alt="Tosca Bacon">
-    <div class="info">
-      <b>Tosca Bacon</b><br>R$21
-    </div>
+    <img src="img/toscabacon.jpg">
+    <div class="info"><b>Tosca Bacon</b><br>R$21</div>
     <div class="controles">
       <button onclick="remover('ToscaBacon')">-</button>
       <span id="qtd-ToscaBacon">0</span>
@@ -105,10 +91,8 @@
   </div>
 
   <div class="produto">
-    <img src="img/xcamarão.jpeg" alt="X Camarão">
-    <div class="info">
-      <b>X Camarão</b><br>R$20
-    </div>
+    <img src="img/xcamarão.jpeg">
+    <div class="info"><b>X Camarão</b><br>R$20</div>
     <div class="controles">
       <button onclick="remover('XCamarao')">-</button>
       <span id="qtd-XCamarao">0</span>
@@ -117,10 +101,8 @@
   </div>
 
   <div class="produto">
-    <img src="img/caseiro.jpg" alt="X Caseiro Especial">
-    <div class="info">
-      <b>X Caseiro Especial</b><br>R$17
-    </div>
+    <img src="img/caseiro.jpg">
+    <div class="info"><b>X Caseiro Especial</b><br>R$17</div>
     <div class="controles">
       <button onclick="remover('XCaseiroEspecial')">-</button>
       <span id="qtd-XCaseiroEspecial">0</span>
@@ -128,7 +110,245 @@
     </div>
   </div>
 
+  <!-- NOVOS LANCHES -->
+
+  <div class="produto">
+    <div class="info"><b>Misto</b><br>R$10</div>
+    <div class="controles">
+      <button onclick="remover('Misto')">-</button>
+      <span id="qtd-Misto">0</span>
+      <button onclick="add('Misto', 10)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <div class="info"><b>Hamburguer Baurú</b><br>R$16</div>
+    <div class="controles">
+      <button onclick="remover('Bauru')">-</button>
+      <span id="qtd-Bauru">0</span>
+      <button onclick="add('Bauru', 16)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <div class="info"><b>Filé de Carne</b><br>R$18</div>
+    <div class="controles">
+      <button onclick="remover('FileCarne')">-</button>
+      <span id="qtd-FileCarne">0</span>
+      <button onclick="add('FileCarne', 18)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <div class="info"><b>Filé de Sol</b><br>R$20</div>
+    <div class="controles">
+      <button onclick="remover('FileSol')">-</button>
+      <span id="qtd-FileSol">0</span>
+      <button onclick="add('FileSol', 20)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <div class="info"><b>Passaporte</b><br>R$22</div>
+    <div class="controles">
+      <button onclick="remover('Passaporte')">-</button>
+      <span id="qtd-Passaporte">0</span>
+      <button onclick="add('Passaporte', 22)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <div class="info"><b>Buiu Duplo</b><br>R$20</div>
+    <div class="controles">
+      <button onclick="remover('BuiuDuplo')">-</button>
+      <span id="qtd-BuiuDuplo">0</span>
+      <button onclick="add('BuiuDuplo', 20)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <div class="info"><b>Buiu Duplo c/ Frango</b><br>R$21</div>
+    <div class="controles">
+      <button onclick="remover('BuiuDuploFrango')">-</button>
+      <span id="qtd-BuiuDuploFrango">0</span>
+      <button onclick="add('BuiuDuploFrango', 21)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <div class="info"><b>Buiu</b><br>R$15</div>
+    <div class="controles">
+      <button onclick="remover('Buiu')">-</button>
+      <span id="qtd-Buiu">0</span>
+      <button onclick="add('Buiu', 15)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <div class="info"><b>Buiu Especial</b><br>R$18</div>
+    <div class="controles">
+      <button onclick="remover('BuiuEspecial')">-</button>
+      <span id="qtd-BuiuEspecial">0</span>
+      <button onclick="add('BuiuEspecial', 18)">+</button>
+    </div>
+  </div>
+
+  <!-- PORÇÕES -->
+
+  <div class="produto">
+    <div class="info"><b>Batata P</b><br>R$8</div>
+    <div class="controles">
+      <button onclick="remover('BatataP')">-</button>
+      <span id="qtd-BatataP">0</span>
+      <button onclick="add('BatataP', 8)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <div class="info"><b>Batata M</b><br>R$12</div>
+    <div class="controles">
+      <button onclick="remover('BatataM')">-</button>
+      <span id="qtd-BatataM">0</span>
+      <button onclick="add('BatataM', 12)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <div class="info"><b>Batata c/ Cheddar e Bacon</b><br>R$15</div>
+    <div class="controles">
+      <button onclick="remover('BatataEspecial')">-</button>
+      <span id="qtd-BatataEspecial">0</span>
+      <button onclick="add('BatataEspecial', 15)">+</button>
+    </div>
+  </div>
+
+  <!-- PRATOS -->
+
+  <div class="produto">
+    <div class="info"><b>Filé c/ Fritas</b><br>R$25</div>
+    <div class="controles">
+      <button onclick="remover('FileFritas')">-</button>
+      <span id="qtd-FileFritas">0</span>
+      <button onclick="add('FileFritas', 25)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <div class="info"><b>Calabresa Acebolada c/ Fritas</b><br>R$23</div>
+    <div class="controles">
+      <button onclick="remover('CalabresaFritas')">-</button>
+      <span id="qtd-CalabresaFritas">0</span>
+      <button onclick="add('CalabresaFritas', 23)">+</button>
+    </div>
+  </div>
+
+  <!-- BEBIDAS -->
+
+  <div class="produto">
+    <div class="info"><b>Refrigerante Lata</b><br>R$7</div>
+    <div class="controles">
+      <button onclick="remover('RefriLata')">-</button>
+      <span id="qtd-RefriLata">0</span>
+      <button onclick="add('RefriLata', 7)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <div class="info"><b>Refri 250ml</b><br>R$5</div>
+    <div class="controles">
+      <button onclick="remover('Refri250')">-</button>
+      <span id="qtd-Refri250">0</span>
+      <button onclick="add('Refri250', 5)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <div class="info"><b>Refri 600ml</b><br>R$10</div>
+    <div class="controles">
+      <button onclick="remover('Refri600')">-</button>
+      <span id="qtd-Refri600">0</span>
+      <button onclick="add('Refri600', 10)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <div class="info"><b>Refri 1L</b><br>R$12</div>
+    <div class="controles">
+      <button onclick="remover('Refri1L')">-</button>
+      <span id="qtd-Refri1L">0</span>
+      <button onclick="add('Refri1L', 12)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <div class="info"><b>Água Mineral</b><br>R$3</div>
+    <div class="controles">
+      <button onclick="remover('Agua')">-</button>
+      <span id="qtd-Agua">0</span>
+      <button onclick="add('Agua', 3)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <div class="info"><b>Água com Gás</b><br>R$5</div>
+    <div class="controles">
+      <button onclick="remover('AguaGas')">-</button>
+      <span id="qtd-AguaGas">0</span>
+      <button onclick="add('AguaGas', 5)">+</button>
+    </div>
+  </div>
+
+  <!-- AÇAÍ -->
+
+  <div class="produto">
+    <div class="info"><b>Açaí 400ml</b><br>R$20</div>
+    <div class="controles">
+      <button onclick="remover('Acai400')">-</button>
+      <span id="qtd-Acai400">0</span>
+      <button onclick="add('Acai400', 20)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <div class="info"><b>Açaí 500ml</b><br>R$22</div>
+    <div class="controles">
+      <button onclick="remover('Acai500')">-</button>
+      <span id="qtd-Acai500">0</span>
+      <button onclick="add('Acai500', 22)">+</button>
+    </div>
+  </div>
+
+  <!-- SHAKES -->
+
+  <div class="produto">
+    <div class="info"><b>Shake Morango</b><br>R$18</div>
+    <div class="controles">
+      <button onclick="remover('ShakeMorango')">-</button>
+      <span id="qtd-ShakeMorango">0</span>
+      <button onclick="add('ShakeMorango', 18)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <div class="info"><b>Shake Chocolate</b><br>R$18</div>
+    <div class="controles">
+      <button onclick="remover('ShakeChocolate')">-</button>
+      <span id="qtd-ShakeChocolate">0</span>
+      <button onclick="add('ShakeChocolate', 18)">+</button>
+    </div>
+  </div>
+
+  <div class="produto">
+    <div class="info"><b>Shake Ovomaltine</b><br>R$20</div>
+    <div class="controles">
+      <button onclick="remover('ShakeOvomaltine')">-</button>
+      <span id="qtd-ShakeOvomaltine">0</span>
+      <button onclick="add('ShakeOvomaltine', 20)">+</button>
+    </div>
+  </div>
+
   <!-- CARRINHO -->
+
   <div class="carrinho">
     <h3>🛒 Seu Pedido</h3>
     <div id="lista"></div>
@@ -139,7 +359,8 @@
     </button>
   </div>
 
-  <!-- INFORMAÇÕES -->
+  <!-- FOOTER -->
+
   <div class="footer">
     <p><b>📍 Endereço:</b> Natal/RN</p>
     <p><b>🕒 Horário:</b> 18h às 23h</p>
