@@ -134,9 +134,19 @@ function enviar() {
 
   mensagem += `%0ATotal: R$ ${document.getElementById("total").innerText}`;
 
-  const url = "https://wa.me/5584988687921?text=" + mensagem;
 
-  window.open(url, "_blank");
+// 👇 COLE AQUI
+let obs = document.getElementById("obs-geral").value;
+
+if(obs.trim() !== ""){
+  mensagem += `%0A📝 Observações: ${encodeURIComponent(obs)}`;
+}
+
+// 👇 DEPOIS DISSO VEM A URL
+const url = "https://wa.me/5584988687921?text=" + mensagem;
+
+window.open(url, "_blank");
+}
 }
 
 /* ALTERAÇÃO PEDIDA:
